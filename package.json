@@ -1,0 +1,35 @@
+{
+  "name": "spinal-browser-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/openDashboardBtn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run spinal-register",
+    "spinal-register": "spinal-register --browser 'spinal-browser-'"
+  },
+  "bin": {
+    "create_dashboard_env": "parcel.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.15",
+    "d3": "^3.5.17",
+    "jquery": "^3.3.1",
+    "nvd3": "^1.8.6",
+    "parcel-bundler": "^1.12.3",
+    "popper.js": "^1.14.7",
+    "spinal-env-drive-core": "git+https://github.com/spinalcom/spinal-env-drive-core.git",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue2-google-maps": "^0.10.6"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.6.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
