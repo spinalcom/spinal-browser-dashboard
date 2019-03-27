@@ -6,7 +6,9 @@
                       :background="widget.background"
                       :icon="widget.icon"
                       :title="widget.title"
-                      :stats="widget.stats"></widget-component>
+                      :stats="widget.stats"
+                      :progress="widget.progress"
+                      ></widget-component>
   </div>
 </template>
 
@@ -23,26 +25,30 @@ export default {
       {
         background: "bg-gradient-teal",
         icon: "fa-globe",
-        title: "SHON",
-        stats: 7842900
+        title: "SHON en m²",
+        stats: 33400,
+        progress: 70
       },
       {
         background: "bg-gradient-blue",
         icon: "fa-dollar-sign",
-        title: "Surface vitrées",
-        stats: 180200
+        title: "Surface vitrées en m²",
+        stats: 22000,
+        progress: 100
       },
       {
         background: "bg-gradient-purple",
         icon: "fa-archive",
-        title: "taux d'occupation",
-        stats: 38900
+        title: "Taux d’occupation (%)",
+        stats: 76.3,
+        progress: 76.3
       },
       {
         background: "bg-gradient-black",
         icon: "fa-comment-alt",
-        title: "ordre de travaux",
-        stats: 3988
+        title: "Ordre de travaux d’entretien",
+        stats: 6,
+        progress: 10
       }
     ];
     return {};

@@ -1,12 +1,14 @@
 
 <template>
-  <div class="col-lg-6">
-    <panel title="Visitors Origin"
+  <div class="col-lg-4">
+    <panel title="Localisation"
            noBody="true"
-           noButton="true">
+           noButton="true" style="    ;
+">
       <template slot="outsideBody">
-        <GmapMap class="bg-black"
-                 style="height: 230px;"
+        <img src="../../assets/picasso-map-ui.png" alt="picasso-map" style="min-height:242px" width="100%" srcset="">
+        <!-- <GmapMap class="bg-black"
+                 style="height: 243px;"
                  v-bind:options="map"
                  :zoom="3"
                  :center="coord">
@@ -15,12 +17,11 @@
                       :position="nanterre"
                       :clickable="true"></GmapMarker>
 
-        </GmapMap>
+        </GmapMap> -->
         <div class="list-group">
           <a href="javascript:;"
              class="list-group-item list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-            1. United State
-            <span class="badge f-w-500 bg-gradient-teal f-s-10">20.95%</span>
+            Picasso
           </a>
         </div>
       </template>

@@ -1,14 +1,15 @@
 
 <template>
-  <div class="col-lg-6">
-    <div class="widget-chart  with-sidebar inverse-mode">
-      <div class="bg-black">
-        <h4 class="chart-title">
+  <!-- <div class="col-lg-6"> -->
+    <div class="widget-chart  bg-black">
+      <!-- <div class=""> -->
+        <h4 class="chart-title" style="    height: 30px;
+">
           {{title | upperCase}}
           <small>{{subtitle}}</small>
         </h4>
-        <div class="widget-chart-full-width nvd3-inverse-mode"
-             style="height: 260px">
+        <!-- <div class="widget-chart-full-width nvd3-inverse-mode" -->
+             <!-- style="min-height: 260px"> -->
 
           <slot></slot>
 
@@ -18,11 +19,11 @@
                            :clipEdge="areaChart.clipEdge"
                            :rightAlignYAxis="areaChart.rightAlignYAxis"
                            :showControls="areaChart.showControls"></vn-stacked-area> -->
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
 
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 

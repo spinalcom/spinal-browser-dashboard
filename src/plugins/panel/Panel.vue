@@ -10,6 +10,7 @@
 			<slot name="header"></slot>
 			<h4 class="panel-title" v-if="!hasHeaderSlot">
 				{{ title }}
+				<small v-if="subtitleCompu.length !== 0">subtitleCompu</small>
 			</h4>
 		</div>
 		<slot name="beforeBody"></slot>
@@ -28,44 +29,48 @@
 
 <script>
 export default {
-	name: 'Panel',
-	props: ['title', 'body', 'footer', 'variant', 'noBody', 'noButton', 'outsideBody', 'bodyClass', 'footerClass', 'panelClass'],
-	data() {
-		return {
-			expand: false,
-			collapse: false,
-			remove: false,
-			reload: false,
-			panelTheme: (this.variant) ? 'panel-' + this.variant : 'panel-inverse'
-		}
-	},
-	computed: {
-		hasFooterSlot() {
-			return !!this.$slots.footer;
-		},
-		hasHeaderSlot() {
-			return !!this.$slots.header;
-		}
-	},
-	methods: {
-		panelExpand: function() {
-			this.expand = !this.expand
-		},
-		panelCollapse: function() {
-			this.collapse = !this.collapse
-		},
-		panelRemove: function() {
-			this.remove = !this.remove
-		},
-		panelReload: function() {
-			this.reload = true;
-			setTimeout(function() { 
-				this.resetReload() 
-			}.bind(this), 2000);
-		},
-		resetReload: function() {
-			this.reload = false;
-		}
-	}
-}
+  name: 'Panel',
+  props: ['title', 'body', 'footer', 'variant', 'noBody', 'noButton', 'outsideBody', 'bodyClass', 'footerClass', 'panelClass', "subtitle"],
+  data() {
+    return {
+      expand: false,
+      collapse: false,
+      remove: false,
+      reload: false,
+      panelTheme: (this.variant) ? 'panel-' + this.variant : 'panel-inverse'
+    };
+  },
+  computed: {
+    subtitleCompu() {
+      if (!this.subtitle) return '';
+      return this.subtitle;
+    },
+    hasFooterSlot() {
+      return !!this.$slots.footer;
+    },
+    hasHeaderSlot() {
+      return !!this.$slots.header;
+    }
+  },
+  methods: {
+    panelExpand: function() {
+      this.expand = !this.expand;
+    },
+    panelCollapse: function() {
+      this.collapse = !this.collapse;
+    },
+    panelRemove: function() {
+      this.remove = !this.remove;
+    },
+    panelReload: function() {
+      this.reload = true;
+      setTimeout(function() {
+        this.resetReload();
+      }.bind(this), 2000);
+    },
+    resetReload: function() {
+      this.reload = false;
+    }
+  }
+};
 </script>

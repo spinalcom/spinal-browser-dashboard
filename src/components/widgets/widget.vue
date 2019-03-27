@@ -8,7 +8,7 @@
         <div class="stats-number">{{stats | statsFormat}}</div>
         <div class="stats-progress progress">
           <div class="progress-bar"
-               style="width: 70.1%;"></div>
+               :style="getProgress()"></div>
         </div>
         <!-- <div class="stats-desc">Better than last week (70.1%)</div> -->
       </div>
@@ -23,7 +23,8 @@ export default {
     title: String,
     stats: Number,
     background: String,
-    icon: String
+    icon: String,
+    progress: Number
   },
   filters: {
     upperCase(valeur) {
@@ -31,6 +32,11 @@ export default {
     },
     statsFormat(valeur) {
       return valeur.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    }
+  },
+  methods: {
+    getProgress(){
+      return `width: ${this.progress}%;`;
     }
   }
 };
