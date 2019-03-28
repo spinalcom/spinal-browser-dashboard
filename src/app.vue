@@ -25,7 +25,7 @@
       </div>
 
       <div class="row">
-        <usage-resto-widget :config="areaChart"></usage-resto-widget>
+        <usage-resto-widget :config="restoChart"></usage-resto-widget>
         <occupation-m2-widget :config="barChart"></occupation-m2-widget>
       </div>
 
@@ -43,20 +43,10 @@ import GmapComponent from "./components/gmap/gmap.vue";
 import consoElecWidget from "./widgets/consoElec.vue";
 import usageRestoWidget from "./widgets/usageResto.vue";
 import occupationM2Widget from "./widgets/occupationM2.vue";
-import { areaChartData } from "./config/areaChartData";
-var barChartData = [
-  {
-    key: "Cumulative Return",
-    values: [
-      { label: " ", value: 2211, color: "#ff5b57" },
-      { label: "  ", value: 1095, color: "#f59c1a" },
-      { label: "   ", value: 2450, color: "#00ACAC" },
-      { label: "    ", value: 15523, color: "#5AC8FA" },
-      { label: "     ", value: 3407, color: "#348fe2" },
-      { label: "      ", value: 771, color: "#727cb6" }
-    ]
-  }
-];
+// import { areaChartData } from "./config/areaChartData";
+import restoChart from "./config/restoChart.js";
+import areaChartData from "./config/surfaceChart.js";
+import barChartData from "./config/occupationPlotChart.js";
 
 export default Vue.extend({
   components: {
@@ -69,6 +59,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      restoChart,
       pageOptions: PageOptions,
       areaChart: areaChartData,
       barChart: {

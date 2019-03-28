@@ -1,14 +1,21 @@
 <template>
   <div class="col-lg-8">
-    <graph-component :title="`Usagers du restaurant d’entreprise`"
-                     :subtitle="'Année courante vs année précédente'">
+    <graph-component :title="`Coût consommation électrique en €`"
+                     :subtitle="'cumule et consomation par étage'">
       <!-- Put here the graph component -->
       <!-- <div class="widget-chart with-sidebar inverse-mode"> -->
+      <!-- <div class=" bg-black nvd3-inverse-mode"
+           style="margin: 0 -65px -15px -25px">
+        <vn-stacked-area :model="model"
+                         yFormat=",.0f"
+                         :xFormat="formatDate"
+                         :clipEdge="clipEdge"
+                         :rightAlignYAxis="rightAlignYAxis"
+                         :showControls="showControls"></vn-stacked-area>
+      </div> -->
+
       <div class=" bg-black nvd3-inverse-mode"
            style="margin: 0 -65px -15px -25px">
-           <!-- style="padding: 0 0 0 0"> -->
-        <!-- <div class="widget-chart-full-width nvd3-inverse-mode" -->
-        <!-- style="height: 260px;margin: 0px 15px;"> -->
         <vn-stacked-area :model="model"
                          yFormat=",.0f"
                          :xFormat="formatDate"
@@ -16,8 +23,6 @@
                          :rightAlignYAxis="rightAlignYAxis"
                          :showControls="showControls"></vn-stacked-area>
       </div>
-      <!-- </div> -->
-      <!-- </div> -->
 
     </graph-component>
   </div>

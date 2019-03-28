@@ -16,7 +16,6 @@
                              :clipEdge="clipEdge"
                              :rightAlignYAxis="rightAlignYAxis"
                              :tooltips="tooltips"
-                             :staggerLabels="tooltips"
                              :showControls="showControls"></vn-bar>
           </div>
         <!-- </div> -->

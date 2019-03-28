@@ -21,32 +21,33 @@ export default {
     "widget-component": WidgetComponent
   },
   data() {
+    const surface = 477*2.4;
     this.widgets = [
       {
         background: "bg-gradient-teal",
-        icon: "fa-globe",
-        title: "SHON en m²",
-        stats: 33400,
-        progress: 70
-      },
-      {
-        background: "bg-gradient-blue",
-        icon: "fa-dollar-sign",
-        title: "Surface vitrées en m²",
-        stats: 22000,
+        icon: "fa-building",
+        title: "Surface en m²",
+        stats: surface,
         progress: 100
       },
       {
+        background: "bg-gradient-blue",
+        icon: "fa-kaaba",
+        title: "Surface vitrées en m²",
+        stats: surface * .4,
+        progress: 50
+      },
+      {
         background: "bg-gradient-purple",
-        icon: "fa-archive",
+        icon: "fa-desktop",
         title: "Taux d’occupation (%)",
         stats: 76.3,
         progress: 76.3
       },
       {
         background: "bg-gradient-black",
-        icon: "fa-comment-alt",
-        title: "Ordre de travaux d’entretien",
+        icon: "fa-clipboard-list",
+        title: "Ordre de travaux d’entretien Ouvert",
         stats: 6,
         progress: 10
       }
