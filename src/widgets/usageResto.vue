@@ -1,7 +1,11 @@
 <template>
   <div class="col-lg-8">
-    <graph-component :title="`Usagers du restaurant d’entreprise`"
-                     :subtitle="'Année courante vs année précédente'">
+    <!-- <graph-component :title="`Usagers du restaurant d’entreprise`"
+                     :subtitle="'Année courante vs année précédente'"> -->
+    <panel title="Usagers du restaurant d’entreprise"
+           noBody="true"
+           noButton="true"
+           style="overflow: hidden;">
       <!-- Put here the graph component -->
       <!-- <div class="widget-chart" style="margin: 0 30px 0px 0;"> -->
       <!-- <div class=" bg-black"> -->
@@ -32,17 +36,18 @@
       <!-- </div> -->
       <!-- </div> -->
 
-    </graph-component>
+      <!-- </graph-component> -->
+    </panel>
   </div>
 
 </template>
 
 <script>
-import GraphComponent from "../components/graph/graph.vue";
+// import GraphComponent from "../components/graph/graph.vue";
 export default {
   name: "usage-resto-widget",
   components: {
-    "graph-component": GraphComponent
+    // "graph-component": GraphComponent
   },
   data() {
     return {};

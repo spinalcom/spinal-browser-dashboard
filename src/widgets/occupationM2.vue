@@ -1,6 +1,11 @@
 <template>
   <div  class="col-lg-4">
-    <graph-component :title="`Occupation en m² par service`">
+    <panel title="Occupation en m² par service"
+           noBody="true"
+           noButton="true"
+           style="overflow: hidden;">
+
+    <!-- <graph-component :title="`Occupation en m² par service`"> -->
       <!-- Put here the graph component -->
       <!-- <div class="widget-chart" style="margin: 0 30px 0px 0;"> -->
         <!-- <div class=" bg-black"> -->
@@ -21,17 +26,18 @@
         <!-- </div> -->
       <!-- </div> -->
 
-    </graph-component>
+    <!-- </graph-component> -->
+    </panel>
   </div>
 
 </template>
 
 <script>
-import GraphComponent from '../components/graph/graph.vue';
+// import GraphComponent from '../components/graph/graph.vue';
 export default {
   name: "occupation-m2-widget",
   components: {
-    "graph-component": GraphComponent
+    // "graph-component": GraphComponent
   },
   data() {
     return {};

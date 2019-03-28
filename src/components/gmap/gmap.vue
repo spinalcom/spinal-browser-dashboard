@@ -6,7 +6,7 @@
            noButton="true" style="    ;
 ">
       <template slot="outsideBody">
-        <img src="../../assets/picasso-map-ui.png" alt="picasso-map" style="min-height:242px" width="100%" srcset="">
+        <img src="../../assets/map.png" alt="picasso-map" style="min-height:242px" width="100%" srcset="">
         <!-- <GmapMap class="bg-black"
                  style="height: 243px;"
                  v-bind:options="map"
@@ -21,7 +21,8 @@
         <div class="list-group">
           <a href="javascript:;"
              class="list-group-item list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-            Picasso
+            Cecobron
+            <span class="badge f-w-500 bg-gradient-teal f-s-10">10 Rue Albert Camus, 69500 BRON</span>
           </a>
         </div>
       </template>
