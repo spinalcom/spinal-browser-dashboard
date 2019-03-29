@@ -3,9 +3,14 @@
     <div id="header"
          class="header navbar-default">
       <!-- begin navbar-header -->
-      <div class="navbar-header" style="padding: 5px;">
-        <img src="./assets/logo_medium.png" alt="SpinalCom" width="auto" height="42">
-      <h1 class="page-header" style="position: absolute;
+      <div class="navbar-header"
+           style="padding: 5px;">
+        <img src="./assets/logo_medium.png"
+             alt="SpinalCom"
+             width="auto"
+             height="42">
+        <h1 class="page-header"
+            style="position: absolute;
     right: 10px;
     top: 11px;">Dashboard</h1>
         <!-- <router-link to="/dashboard/v2"
@@ -14,7 +19,8 @@
       </div>
     </div>
 
-    <div class="container-fluid" style="margin-top: 8px;">
+    <div class="container-fluid"
+         style="margin-top: 8px;">
 
       <dashboard-component></dashboard-component>
 
@@ -63,7 +69,7 @@ export default Vue.extend({
       pageOptions: PageOptions,
       areaChart: areaChartData,
       barChart: {
-        data: barChartData,
+        data: [],
         staggerLabels: false
       }
     };
@@ -74,6 +80,11 @@ export default Vue.extend({
     }
   },
   mounted() {
+    barChartData(res => {
+      this.barChart.data = res;
+    });
+
+    // this.barChart.data = await barChartData();
     // this.$insProgress.finish();
   },
   created() {

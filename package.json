@@ -17,24 +17,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "spinal-createOpenDashboarBtn-joint": "git+https://github.com/spinalcom/spinal-createOpenDashboarBtn-joint.git",
     "@fortawesome/fontawesome-free": "^5.8.1",
+    "@vue/component-compiler-utils": "^2.6.0",
     "aes-js": "^3.1.2",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.15",
     "d3": "^3.5.17",
     "jquery": "^3.3.1",
+    "lodash.throttle": "^4.1.1",
     "nvd3": "^1.8.6",
     "parcel-bundler": "^1.12.3",
     "popper.js": "^1.14.7",
+    "spinal-createOpenDashboarBtn-joint": "git+https://github.com/spinalcom/spinal-createOpenDashboarBtn-joint.git",
     "spinal-env-drive-core": "git+https://github.com/spinalcom/spinal-env-drive-core.git",
+    "spinal-env-viewer-graph-service": "git+https://github.com/spinalcom/Spinal-Graph-Service.git",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3",
     "vue-nvd3": "^1.0.0",
-    "vue2-google-maps": "^0.10.6",
     "vue-template-compiler": "^2.6.10",
-    "@vue/component-compiler-utils": "^2.6.0"
+    "vue2-google-maps": "^0.10.6"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

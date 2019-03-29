@@ -33,12 +33,6 @@ import * as VueGoogleMaps from 'vue2-google-maps';
 
 Vue.use(VuePanel);
 
-import {spinalIO} from './services/spinal-io';
-spinalIO.getPathModel().then(
-  (res) => {console.log(res);}
-);
-
-
 Vue.use(VueGoogleMaps, {
   load: {
     key: '',
