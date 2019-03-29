@@ -1,3 +1,5 @@
+import "babel-polyfill";
+
 import Vue from "vue";
 import App from "./app.vue";
 import VuePanel from "./plugins/panel/index.js";
@@ -30,6 +32,11 @@ import './assets/css/style.css';
 import * as VueGoogleMaps from 'vue2-google-maps';
 
 Vue.use(VuePanel);
+
+import {spinalIO} from './services/spinal-io';
+spinalIO.getPathModel().then(
+  (res) => {console.log(res);}
+);
 
 
 Vue.use(VueGoogleMaps, {
