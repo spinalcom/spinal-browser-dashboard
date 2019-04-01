@@ -13,7 +13,8 @@ function getData(onChangeFunc) {
       values: OccupationNodeInfo.map(e => {
         return {
           label: e.name,
-          value: e.children.length * 20
+          value: e.children.length * 17.4,
+          color: e.color
         };
       })
     }];
